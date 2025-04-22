@@ -89,7 +89,7 @@
   - Turn on **Q&A** for natural language queries in the Power BI report
   - Turn on **Large dataset storage format** which may help with the large data volumes in the fact table
   
-8. A video walking you through these steps can be found at [this link](https://youtu.be/8K4vvy_o9j0).
+
 
 
 [Back to main Readme](../Readme.md#step-2-download-raw-files-and-build-out-silver-and-gold-layer-tables-star-schema-to-be-used-for-reporting) | [Next](./4-CreatePBIReport.md)

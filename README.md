@@ -24,4 +24,4 @@ The purpose of this repository is to share some end to end tutorials similar to 
 * [Public Documentation](https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview)
 * [Overview Blog](https://www.jamesserra.com/archive/2023/05/build-announcement-microsoft-fabric/)
 * [Overview Video](https://www.youtube.com/watch?v=a6A3jtvB62U)
-* [Overview Slides](https://serrapublic.blob.core.windows.net/presentations/Microsoft%20Fabric%20-%20James%20Serra%20-%20Public.pdf)
+

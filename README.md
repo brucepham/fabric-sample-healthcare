@@ -15,7 +15,6 @@ The purpose of this repository is to share some end to end tutorials similar to 
 
 
 * [Analytics - BI with Direct Lake Star Schema](./analytics-bi-directlake-starschema/Readme.md)
-* [Analytics - BI over Large Complex JSON Dataset](./analytics-bi-largecomplex-jsondataset/Readme.md)
 
 <hr/>
 

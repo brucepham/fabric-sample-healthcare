@@ -1,5 +1,5 @@
 ## Updates December 2024
-- Added a new component of this module to cover [Fabric AI Skills](https://learn.microsoft.com/en-us/fabric/data-science/concept-ai-skill), which is in Public Preview at the time of publication. The AI Skills component can be deployed in a few minutes once you have completed **Step 2a** or **Step 2b** from the instructions below. The AI Skills demo will enable you to ask natural language queries of the star schema relational model in either the Fabric Lakehouse or Warehouse. The results can be used to both generate insights into the data or to create complex SQL queries. The new AI Skills component is listed as **Step 5** at the bottom of this page. View a video about the AI Skill example and walk through the deployment process at this link: https://youtu.be/ftout8UX4lg 
+- Added a new component of this module to cover [Fabric Data Agent](https://learn.microsoft.com/en-us/fabric/data-science/concept-ai-skill), which is in Public Preview at the time of publication. The AI Skills component can be deployed in a few minutes once you have completed **Step 2a** or **Step 2b** from the instructions below. The AI Skills demo will enable you to ask natural language queries of the star schema relational model in either the Fabric Lakehouse or Warehouse. The results can be used to both generate insights into the data or to create complex SQL queries. The new AI Skills component is listed as **Step 5** at the bottom of this page. 
 - Updated instructions and file for the PBIX in this repo. Eliminated some broken code (naming conventions fixed for Prescriber State, Prescriber City State, and Prescriber City columns) and improved deployment instructions.
 
 ## Updates October 2024
@@ -11,7 +11,7 @@
 # Fabric Power BI Direct Lake Connector with 250M Rows
 
 ## Scenario
-The Fabric Direct Lake connector is a new technology for querying delta parquet files from Power BI without data caching or an intermediary relational database. Power BI datasets have been modernized so that the semantic layer containing metadata and query logic can directly query the Fabric Data Lake. Data for the demo is 250 million rows of real healthcare data from the open data database titled **Medicare Part D Prescribers - by Provider and Drug**. Link here: https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug . An end-to-end demo of this solution module can be viewed at this link: https://youtu.be/2tLIGVZ4c8E 
+The Fabric Direct Lake connector is a new technology for querying delta parquet files from Power BI without data caching or an intermediary relational database. Power BI datasets have been modernized so that the semantic layer containing metadata and query logic can directly query the Fabric Data Lake. Data for the demo is 250 million rows of real healthcare data from the open data database titled **Medicare Part D Prescribers - by Provider and Drug**. Link here: https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug.
 
 ## Scope
 This demo is intended to provide experience with data engineering tasks using Fabric Spark and/or Data Pipelines to build out Delta Parquet tables and then use the Direct Lake connector in Power BI to query large volumes of real data. The medallion lakehouse architecture is followed in this sample where raw CSV files are loaded to Bronze Layer, then Silver Layer flat table built using Delta Parquet format and lastly Gold Layer tables serve up the star schema model for a Direct Lake Power BI dataset. 
@@ -35,13 +35,13 @@ Click the url above for instructions aon setting up your Lakehouse and importing
 
 **Note**: Fabric Data Factory Pipeline implementation steps are manual for now but we will look into making it easier using automation in future. **Both options 2a and 2b are manual but Step 2a is going to be a little less effort to setup because it uses Spark Notebooks which can be easily imported for use in your Fabric workspace. Step 2b will require little extra effort to setup Pipeline activities for SQL Stored Procedures, but in return the Gold Layer will be in the Fabric Warehouse instead of the Lakehouse (folks from a SQL background may prefer this option).**
 
-**2a. Gold Layer in Fabric Lakehouse** - A Fabric Data Factory Pipeline is implemented to use Spark Notebooks for building out all three layers - Bronze, Silver and Gold Layers in a Fabric Lakehouse. Click the link below for instructions in this GitHub Repo, and you can also watch a video reviewing the 2a process at this link: https://youtu.be/TG03mkJKq4k
+**2a. Gold Layer in Fabric Lakehouse** - A Fabric Data Factory Pipeline is implemented to use Spark Notebooks for building out all three layers - Bronze, Silver and Gold Layers in a Fabric Lakehouse. Click the link below for instructions in this GitHub Repo.
 
 **[Setup Pipeline with Gold Layer in Fabric Lakehouse](./docs/2a-SetupPipeline-GoldLayerFabricLakehouse.md)**
 
 Skip to Step 3 if Step 2a was chosen and successfully executed to create star schema tables.
 
-**2b. Gold Layer in Fabric Warehouse** - Fabric Data Factory Pipeline is implemented to use Spark Notebooks for building Bronze and Silver Layers in a Lakehouse but SQL Stored Procedures for building out the final Gold Layer persisted in Fabric Warehouse. A video detailing the creation and deployment of these Stored Procedures can be found at this link: https://youtu.be/G6t4d5FU0zI 
+**2b. Gold Layer in Fabric Warehouse** - Fabric Data Factory Pipeline is implemented to use Spark Notebooks for building Bronze and Silver Layers in a Lakehouse but SQL Stored Procedures for building out the final Gold Layer persisted in Fabric Warehouse.  
 
 You will need the Lakehouse name from Step 1 and if you used the suggested name **cms_lakehouse** it will be easier otherwise a few edits in T-SQL scripts will be required.
 
